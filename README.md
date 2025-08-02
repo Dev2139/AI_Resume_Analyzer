@@ -1,112 +1,74 @@
 # AI Resume Analyzer
 
-A modern, AI-powered resume analyzer built with React and Google Gemini AI. Get instant feedback on your resume to improve your job applications.
+![AI Resume Analyzer Screenshot](https://res.cloudinary.com/dsddldquo/image/upload/v1754158679/squszptgacjidtijjaxc.png) <!-- Replace with a URL to your screenshot -->
+
+An intelligent web application that leverages the Google Gemini API to provide instant, detailed, and actionable feedback on your resume. Upload your resume in `.pdf`, `.txt`, or `.md` format and receive a comprehensive analysis of its strengths, weaknesses, and suggestions for improvement, all presented in a sleek, modern dark-themed UI.
+
+---
 
 ## Features
 
-- **AI-Powered Analysis**: Uses Google Gemini AI to analyze resumes
-- **Multiple File Formats**: Supports PDF, TXT, and MD files
-- **Drag & Drop Interface**: Easy file upload with drag and drop support
-- **Detailed Feedback**: Get strengths, areas for improvement, and actionable suggestions
-- **Modern UI**: Beautiful, responsive design with glassmorphism effects
-- **Secure API Key Management**: Secure storage and management of your API key
+-   **AI-Powered Analysis**: Get in-depth feedback on your resume's content and structure.
+-   **Point-by-Point Feedback**: Analysis is broken down into clear, digestible points for:
+    -   ✅ **Strengths**: What you're doing right.
+    -   ⚠️ **Areas for Improvement**: What could be better.
+    -   🚀 **Actionable Suggestions**: Specific steps to elevate your resume.
+-   **Multiple File Formats**: Supports `.pdf`, `.txt`, and `.md` file uploads.
+-   **Drag & Drop Interface**: Modern, intuitive file upload system.
+-   **Engaging UI/UX**: Features a sleek dark theme, glassmorphism effects, and an interactive AI loading animation.
+-   **Responsive Design**: Looks and works great on all devices, from desktops to mobile phones.
+
+---
+
+## Tech Stack
+
+-   **Frontend**: [React](https://reactjs.org/)
+-   **Development Server**: [Vite](https://vitejs.dev/)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+-   **AI Model**: [Google Gemini Pro](https://deepmind.google/technologies/gemini/)
+-   **PDF Parsing**: [Mozilla PDF.js](https://mozilla.github.io/pdf.js/) 
+
+---
 
 ## Getting Started
 
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
 ### Prerequisites
 
-- Node.js (version 14 or higher)
-- npm or yarn
-- Google Gemini API key
+-   A **Google Gemini API Key**. You can get one from the [Google AI Studio](https://aistudio.google.com/app/apikey).
 
-### Installation
+### Installation & Setup
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd Ai-Resume-Analyzer
-```
+1.  **Clone the repository (or create a new project):**
+    ```bash
+    # If you have the code, just navigate into the directory
+    # OR, to start from scratch:
+    npm create vite@latest Ai_Resume_Analyzer -- --template react
+    cd my-resume-analyzer
+    ```
 
-2. Install dependencies:
-```bash
-npm install
-```
+2.  **Install project dependencies:**
+    This command installs React, ReactDOM, and the development dependencies for Vite.
+    ```bash
+    npm install
+    ```
 
-3. Start the development server:
-```bash
-npm run dev
-```
+7.  **Add the Application Code:**
+    Replace the contents of `src/App.jsx` with the code provided for the Resume Analyzer.
 
-4. Open your browser and navigate to `http://localhost:5173`
+8.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    Open your browser and navigate to the local URL provided in the terminal (usually `http://localhost:5173`).
 
-### Getting Your Gemini API Key
+---
 
-1. Visit [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Sign in with your Google account
-3. Click "Create API Key"
-4. Copy your API key (it will look like `AIzaSyC...`)
+## Usage
 
-### Using the Application
-
-1. **First Time Setup**: When you first open the app, you'll be prompted to enter your Gemini API key
-2. **Enter API Key**: Paste your API key in the modal and click "Save & Continue"
-3. **Upload Resume**: Drag and drop your resume file or click to browse
-4. **Analyze**: Click "Analyze Resume" to get AI-powered feedback
-5. **Review Results**: View detailed analysis including strengths, areas for improvement, and suggestions
-
-### Supported File Formats
-
-- **PDF**: Most common resume format
-- **TXT**: Plain text files
-- **MD**: Markdown files
-
-## API Key Security
-
-- Your API key is stored securely in your browser's localStorage
-- The key is never sent to any server except Google's Gemini API
-- You can change your API key anytime by clicking "Change" in the header
-
-## Error Handling
-
-The application includes comprehensive error handling for:
-- Invalid API keys
-- Rate limiting
-- Network issues
-- File parsing errors
-- Unsupported file types
-
-## Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-### Tech Stack
-
-- **React 19** - Frontend framework
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Styling
-- **Google Gemini AI** - AI analysis
-- **PDF.js** - PDF parsing
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
-## License
-
-This project is open source and available under the MIT License.
-
-## Support
-
-If you encounter any issues:
-1. Check that your API key is valid
-2. Ensure you have a stable internet connection
-3. Try uploading a different file format
-4. Check the browser console for detailed error messages
+1.  Launch the application.
+2.  Drag and drop your resume file (`.pdf`, `.txt`, or `.md`) into the upload area, or click to browse your files.
+3.  Once the file is loaded, click the **"Analyze Resume"** button.
+4.  Wait for the AI to process your resume.
+5.  Review the detailed, point-by-point feedback provided in the analysis cards.
